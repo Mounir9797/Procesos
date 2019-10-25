@@ -1,0 +1,11 @@
+package banco;
+
+public class PruebaCuentaV1 {
+
+	public static void main(String[] args) {
+		
+		Cuenta c= new Cuenta(500);
+
+	}//main
+
+}//class

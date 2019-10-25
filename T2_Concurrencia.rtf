@@ -1,0 +1,155 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs28\lang10 T2-CONCURRENCIA Y PROGRAMACI\'d3N CONCURRENTE\fs22\par
+03/10/2019\par
+\b 1. PROGRAMACI\'d3N CONCURRENTE\b0\par
+Un proceso es un programa en ejecuci\'f3n. Esto quiere decir que requiere unos recursos que pedira al SO: memoria, tiempo de CPU, acceso a dispositivos de entrada y salida, acceso a ficheros, etc.\par
+El SO es un proceso especial que se carga desde el hardware de la maquina y que gestiona los demas procesos, incluyendo el acceso de cada proceso a los recursos del sistema.\par
+Llamamos programaci\'f3n concurrente al conjunto de t\'e9cnicas de programaci\'f3n que tienen en cuenta la existencia simultanea de procesos en ejecuci\'f3n.\par
+Problemas inherentes a la programacion concurrente:\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1 Memoria compartida: Varios procesos intentan acceder simultaneamente a un mismo recurso para cambiarlo. La solucion a este problema pasa por marcar en el codigo las secciones conflictivas que se llaman secci\'f3n critica. Sobre cada secci\'f3n critica se pieden establecer difrerentes mecanismos de exclusion mutua.\par
+{\pntext\f0 2.\tab}Condiciones de sincronizaci\'f3n:  en el mundo real hay dominios de conocimiento que necesitan sincronizaci\'f3n (aeropuertos, trafico, logistica...).\b\par
+
+\pard\sa200\sl276\slmult1\par
+ 2. PROCESOS E HILOS\par
+\b0 Un proceso es un c\'f3digo en ejecucion. Para cada proceso el sistema operativo registra una entrada en la tabla de procesos con informaci\'f3n sobre los recursos asignados a ese proceso:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Mapa de memorias del proceso\par
+{\pntext\f1\'B7\tab}Estados del proceso y valores de los registros\par
+{\pntext\f1\'B7\tab}pia y contador de programacion\par
+{\pntext\f1\'B7\tab}identificador del proceso: PID\par
+{\pntext\f1\'B7\tab}informacion de control: permisos, acceso a recursos, acceso a dispositivos de E/S\par
+
+\pard\sa200\sl276\slmult1 Un HILO, thread o subproceso es un codigo en ejecucion (like a process) pero que no tiene memorua y recursos propios. Esto significa que dentro de un proceso podemos tener varios hilos o trozos de c\'f3digo que se ejecuten en paralelo, pero compartiendo los recursos del proceso.\par
+\par
+Podmos decir que un hilo es una unidad de planificaci\'f3n porque el planificador me puede asignar slots de tiempo, mientras que un proceso es una unidad de asignaci\'f3n de recursos.\par
+\par
+Aun as\'ed, para jecutar su cofigo, cada jilo tendra su pila y sus rehisyrod dfe CPU, incluido su contador de programa CP, sus variables locales, etc. Pero al compartir con otros hilos uin unico espacio de memoria se pueden pisar entre hilos, porque no hay mecanismos de proteccion entre hilos.\par
+Todos estos problemas se solcvionan con tecnicas de exclusion mutua y de sincronizaci\'f3n.\par
+\b Estado de un proceso con hilos\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1\b0 Si algun hilo esta en ejecucion\tab\tab\tab\tab Running\par
+{\pntext\f0 2.\tab}Si no hay hilos en ejecucion pero estan losros \tab\tab Ready\par
+{\pntext\f0 3.\tab}Si todos sus hilos estan bloqueados\tab\tab\tab Blocked\par
+
+\pard\sa200\sl276\slmult1 DIFERENCIAS ENTRE UN HILO Y UN PROCESO\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1 Espaco de direciones: cada proceso tienme su spopio espacio de direcciones, mientras qe un hilo comparte el espacio de proceso con los dem\'e1s hilos\par
+{\pntext\f0 2.\tab}Tiempo de procesador: Un proceso compite con el tiempo de CPU con otros procesos. Los hjilos de un proceso se reparten el tiempo de CPU dentro del tiempo de su proceso, pero no compiten con hilos de otros procesos.\par
+
+\pard\sa200\sl276\slmult1 VENTAJAS DE LOS HILOS:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 permiten paralelizar la ejecuci\'f3n del c\'f3digo hasta donde se pueda\par
+{\pntext\f1\'B7\tab}reducen la cantidad de cambios de estado de los procesos: si un proceso debe ejecutar una operacion bloqueante no necesita renuncair a su slot de tiempo; puede bloquea el hilo encargado de esa operacion y seguir ejecutando otros hilos.\par
+
+\pard\sa200\sl276\slmult1 3. PROGRAMACI\'d3N DE HILOS EN JAVA\par
+Hay 2 formas de trabajaar con hilos en java:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 extender la clase Thread\par
+{\pntext\f1\'B7\tab}implementar la interfaz Runnable; esto permite extender otras clases y ademas tener hilos\par
+{\pntext\f1\'B7\tab}Ver ejemplos hiloSleep e HiloSleepRun\par
+
+\pard\sa200\sl276\slmult1\par
+Los m\'e9todos basicos que contienen son:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Run(): contiene el c\'f3digo que ejecuta el hilo\par
+{\pntext\f1\'B7\tab}start(): crea el hilo\par
+{\pntext\f1\'B7\tab}stop(): detiene el hilo\par
+{\pntext\f1\'B7\tab}sleep(long milisegundos): bloquea el hilo (no el proceso) durante el tiempo especificado\par
+{\pntext\f1\'B7\tab}yield(): el hilo en ejecuci\'f3n se retira para que otro hilo ejecute.\par
+
+\pard\sa200\sl276\slmult1\par
+ESTADOS DE UN HILO\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1 Nuevo (new): el hilo esta creado epro aun no esta ejecutando; es decir, a\'fan no ha ejecutado run.\par
+{\pntext\f0 2.\tab}Runnable: el hilo esta listo PERO puede estar ejecutando o no.\par
+{\pntext\f0 3.\tab}Dead: el hilo esrta muerto por diferentes causas:\par
+
+\pard\sa200\sl276\slmult1\tab\tab - run ha finalizado con normalidad\par
+\tab\tab - run ha finalizado debido a alguna excepcion no tratada\par
+\tab\tab - se ha ejecutado el m\'e9todo stop. Este m\'e9todo est\'e1 desaconsejado porque no \tab\tab\tab libera los bloqueos de recursos.\par
+       4. Blocked: el hilo podria ejecutarse pero hay algo qyue se lo impide, por ejemplo;\par
+\tab\tab -alguien llama al sleep del hilo\par
+\tab\tab - espera por una operacion de E/S\par
+\tab\tab - ejecuta su m\'e9todo wait. En este caso, solo volver\'e1 al estado Runnable cuando \tab\tab\tab reciba los mensajes notify o notifyall. Esto suele ocurrir cuando el hilo intenta \tab\tab\tab bloquear un recurso que ya esta bloqueado por otro hilo.\par
+\tab\tab - alguien llama al m\'e9todo suspend del hilo. Este m\'e9todo tamkbi\'e9n esta \tab\tab\tab\tab desaconsejado actualmente\par
+\par
+\par
+\par
+10/10/2019\par
+Metodo Join\par
+Es un m\'e9todo que tienen los hilos. Se utiliza para obligar a que el hilo padre espere la finalizacion de todos los hilos tengan el join.\par
+Hay otra version de join que permite especificar un timeout en milosegundos y nanosegundos.\par
+\par
+MONITORIZACION DE HILOS\par
+jps muestra los PID de  los procesos Java que hay ejecutandose en el sistema, justo con el nombre de la clave que se esta utilizando y sus argumentos.\par
+\par
+opciones [-q] [-mlvV] [<hostid>]\par
+\par
+jps -mlvV nos da informacion sobre la propia maqukina virtual de Java\par
+\par
+jcmd: permite consultar informacion sobre las JVM al igual que jps, es m\'e1s , si lo ejecutamos sin parametros la informacion es casi la misma.\par
+\par
+Podemos ver las propiedades de un determinado thread mediante su PID:\par
+JCMD <PID> Thread.print\par
+Otro comando que se puede utiulizar es el jstack\par
+jstack -l <pid>Z>\par
+nos da la misma informacion que kla anyterior opcion de jcmd\par
+\par
+\b SINCRONIZACION DE HILOS \b0  \b Y COMPARTICION DE RECURSOS\par
+\b0 Los hilos permiten paralelizar ciertas funcionalidades dentro de una aplicacion.Sin embargo, estan obligados a compartir la memoria del proceso y a sincronizarse adecuadamente para que la aplicacion funcione correctamente.\par
+Los principales problemas que pueden surgir en una aplicacin concurrente son:\par
+\tab - necesidad de exclusion mutua: un mismo recurso no puede ser accedido por dos hilos \tab a la vez\tab\par
+\tab -interbloqueo: la necesidad de exclusion mutua puede producir bloqueos sin solucion \tab que hay que preveer. Por ejemplo, en el caso de necesitar 2 recursos, un hilo puede \tab tener uno y el otro, pero ninguno avanza.\par
+\tab -inanici\'f3n: se refiere aq una espera infinita\par
+\tab - Coherencia de datos: varios recursos guardan relacion de dependencia (por ejemplo, \tab una ariable debe contener el doble de otra), su modificacion deberia ocurrir de forma \tab atomica para garantizar la coherencia.\par
+\par
+En java existen diferentes mecanismos para resolver estos problemas:\par
+\tab - variables, bloques y metodos syncronized: permiten utilizar m\'e9todos de sincronizacion \tab como wait, notify y notifyall. Adem\'e1s , los bloques de codigo marcados como \tab Syncronized (incluidos los metodos que llevenm este modificador) se ejecutaran de \tab forma atomica\par
+\tab -M\'e9todo wait(): permite que un hilo se quede esperando a que se den ciertas \tab condiciones.\par
+\tab -M\'e9todos notify: cuando un hilo termina su tarea y libera algun recurso, puede \tab notifiarlo a los que esperan. Notify lanza la notificacion solo a un hilo de los que estan \tab waiting.\par
+\tab -NotifyAll: la notificacion va para todos los que esperan.\par
+\par
+Ejercicios;\par
+1. Escribir un hilo llamado Tic que escriba una palabra cada segundo. Debe tener un constructor que admita como parametro la palabra a escribir. Poner al hilo el nombre de la palabra.\par
+Escribir tambien un programa que instancie y lance un hilo.\par
+\par
+El \b modificador volatile \b0 para una variable evita que cada hilo tenga la variable en su propia cach\'e9, lo cual podria dar lugar a inconsistencias. Al poner \b volatile\b0 , solo habr\'e1 una copia de la variable en la memoria real del proceso, y por tanto todos los hilos ver\'e1n la variable aut\'e9ntica.\par
+\par
+No es recomendable abusar de las variables volatile porque,  al no estar alacenadas en cache garantiza la lectura del valor real tambien reducen el rendimiento.\par
+\par
+ 17/10/2019\par
+\b SECCI\'d3N CR\'cdTICA\b0\par
+Llamamos secci\'f3n cr\'edtica al conjunto de instrucciones que pueden producir problemas de concurrencia, llamados condiciones de carrera (race condicions).\par
+\par
+En general la seccion critica esta rodeada de dos bloques de instruciones:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b Acceso a la seccion cr\'edtica\b0 : para acceder a la seccion critica se compruban una o varias variables compartidas llamadas Flags. Cuando un hilo accede a la secci\'f3n cr\'edtica, cambia el valor de las banderas y bloquea a los demas con wait().\par
+{\pntext\f1\'B7\tab}\b Salida de la secci\'f3n cr\'edtica:\b0  cuando la seccion crtica ha terminado es necesario cambiar la bandera de nuev y despertar a los hilos bloqueados con notify y notifyAll. Estos volveran a competir, hasta que uno consiga entrar en la secci\'f3n cr\'edtica y bloquee a los dem\'e1s, etc.\par
+
+\pard\sa200\sl276\slmult1 Para que todo esto funcione \b todos los hilos deben compartir algun objeto\b0  sobre el cual se ejecutan los \b bloqueos (lock). \b0 Este objeto se llama \b MONITOR, \b0  y contiene la memoria compartida por los hilos.\par
+\par
+21/10/2019\par
+\b PARADA DE UN HILO\par
+\b0 La clase Thread tiene dos m\'e9todos, stop y suspend, que solicitan la parada del hilo. Sin embargo estos m\'e9todos no liberan los recursos que el hilo puede estar manejandi(referencias a streams, sockets, etc) por lo que estan desaconsejado.\par
+Actualmente, el mecanismo que utilizamos es la interrupci\'f3n:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Cada hilo tiene un flag para controlar la parada; el nucle que hay dentro de run est\'e1 condicionado a este flag: Ej \b while (!parar)\{...\}\b0\par
+{\pntext\f1\'B7\tab}Cuando se produzca la condicion o evento en el programa principal que implique la parada de hilos, simplemente se envia la interrupcion a cada hilo con el m\'e9todo \b interrupt().\par
+{\pntext\f1\'B7\tab}\b0 Cada hilo, al capturar la excepcion interruptedException, pondra el flag a false para parar el bucle y terminar: Ej \b catch(InterrupedException e)\{ parar=true \}\b0 .\b\par
+
+\pard\sa200\sl276\slmult1\b0\par
+24/10/2019\par
+\b\par
+\par
+}
+ 

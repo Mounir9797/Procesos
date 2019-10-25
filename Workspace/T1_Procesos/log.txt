@@ -1,0 +1,15 @@
+ El volumen de la unidad E es Datos El n£mero de serie del volumen es: 1DA9-D686 Directorio de E:\Mounir\Programacion\Workspace\T1_Procesos19/09/2019  09:40    <DIR>          .19/09/2019  09:40    <DIR>          ..16/09/2019  11:27               301 .classpath16/09/2019  11:27               387 .project16/09/2019  11:27    <DIR>          .settings19/09/2019  09:17    <DIR>          bin19/09/2019  09:41                 0 log.txt19/09/2019  09:17    <DIR>          src               3 archivos            688 bytes               5 dirs  304.393.396.224 bytes libres El volumen de la unidad E es Datos
+ El n£mero de serie del volumen es: 1DA9-D686
+
+ Directorio de E:\Mounir\Programacion\Workspace\T1_Procesos
+
+19/09/2019  09:40    <DIR>          .
+19/09/2019  09:40    <DIR>          ..
+16/09/2019  11:27               301 .classpath
+16/09/2019  11:27               387 .project
+16/09/2019  11:27    <DIR>          .settings
+19/09/2019  09:17    <DIR>          bin
+19/09/2019  09:41               567 log.txt
+19/09/2019  09:17    <DIR>          src
+               3 archivos          1.255 bytes
+               5 dirs  304.393.392.128 bytes libres

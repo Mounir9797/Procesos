@@ -1,0 +1,13 @@
+package puente;
+
+public class Coche extends Thread{
+	
+
+	private Puente p;
+	private String matricula;
+	private boolean parar;
+	
+	public Coche() {
+		// TODO Auto-generated constructor stub
+	}
+}

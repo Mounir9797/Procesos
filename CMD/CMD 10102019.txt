@@ -1,0 +1,90 @@
+Microsoft Windows [Versión 6.3.9600]
+(c) 2013 Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\mañana>jps -mlvV
+1504 sun.tools.jps.Jps -mlvV -Dapplication.home=C:\Program Files (x86)\Java\jdk1
+.8.0_111 -Xms8m
+1128  -Dosgi.requiredJavaVersion=1.8 -Dosgi.instance.area.default=@user.home/ecl
+ipse-workspace -XX:+UseG1GC -XX:+UseStringDeduplication -Dosgi.requiredJavaVersi
+on=1.8 -Dosgi.dataAreaRequiresExplicitInit=true -Xms256m -Xmx1024m -Declipse.p2.
+max.threads=10 -Doomph.update.url=http://download.eclipse.org/oomph/updates/mile
+stone/latest -Doomph.redirection.index.redirection=index:/->http://git.eclipse.o
+rg/c/oomph/org.eclipse.oomph.git/plain/setups/
+
+C:\Users\mañana>jcmd
+1128
+2460 sun.tools.jcmd.JCmd
+
+C:\Users\mañana>jps
+1128
+792 Jps
+
+C:\Users\mañana>jcmd 2320 VM.system_properties > eclipse.log
+java.io.IOException: no such process
+        at sun.tools.attach.WindowsVirtualMachine.openProcess(Native Method)
+        at sun.tools.attach.WindowsVirtualMachine.<init>(WindowsVirtualMachine.j
+ava:56)
+        at sun.tools.attach.WindowsAttachProvider.attachVirtualMachine(WindowsAt
+tachProvider.java:69)
+        at com.sun.tools.attach.VirtualMachine.attach(VirtualMachine.java:208)
+        at sun.tools.jcmd.JCmd.executeCommandForPid(JCmd.java:147)
+        at sun.tools.jcmd.JCmd.main(JCmd.java:131)
+
+C:\Users\mañana>jcmd
+1892 sun.tools.jcmd.JCmd
+1128
+
+C:\Users\mañana>jcmd 1128 VM.system_properties > eclipse.log
+com.sun.tools.attach.AttachNotSupportedException: Unable to attach to 64-bit pro
+cess
+        at sun.tools.attach.WindowsVirtualMachine.openProcess(Native Method)
+        at sun.tools.attach.WindowsVirtualMachine.<init>(WindowsVirtualMachine.j
+ava:56)
+        at sun.tools.attach.WindowsAttachProvider.attachVirtualMachine(WindowsAt
+tachProvider.java:69)
+        at com.sun.tools.attach.VirtualMachine.attach(VirtualMachine.java:208)
+        at sun.tools.jcmd.JCmd.executeCommandForPid(JCmd.java:147)
+        at sun.tools.jcmd.JCmd.main(JCmd.java:131)
+
+C:\Users\mañana>jcmd 1128 Thread
+1128:
+com.sun.tools.attach.AttachNotSupportedException: Unable to attach to 64-bit pro
+cess
+        at sun.tools.attach.WindowsVirtualMachine.openProcess(Native Method)
+        at sun.tools.attach.WindowsVirtualMachine.<init>(WindowsVirtualMachine.j
+ava:56)
+        at sun.tools.attach.WindowsAttachProvider.attachVirtualMachine(WindowsAt
+tachProvider.java:69)
+        at com.sun.tools.attach.VirtualMachine.attach(VirtualMachine.java:208)
+        at sun.tools.jcmd.JCmd.executeCommandForPid(JCmd.java:147)
+        at sun.tools.jcmd.JCmd.main(JCmd.java:131)
+
+C:\Users\mañana>
+
+
+C:\Users\mañana>jcmd 1128 Thread.printç
+1128:
+com.sun.tools.attach.AttachNotSupportedException: Unable to attach to 64-bit pro
+cess
+        at sun.tools.attach.WindowsVirtualMachine.openProcess(Native Method)
+        at sun.tools.attach.WindowsVirtualMachine.<init>(WindowsVirtualMachine.j
+ava:56)
+        at sun.tools.attach.WindowsAttachProvider.attachVirtualMachine(WindowsAt
+tachProvider.java:69)
+        at com.sun.tools.attach.VirtualMachine.attach(VirtualMachine.java:208)
+        at sun.tools.jcmd.JCmd.executeCommandForPid(JCmd.java:147)
+        at sun.tools.jcmd.JCmd.main(JCmd.java:131)
+
+C:\Users\mañana>jstack -l 1128
+1128: Unable to attach to 64-bit process
+The -F option can be used when the target process is not responding
+
+C:\Users\mañana>jps
+1128
+1340 Jps
+
+C:\Users\mañana>jstack -l 1128
+1128: Unable to attach to 64-bit process
+The -F option can be used when the target process is not responding
+
+C:\Users\mañana>

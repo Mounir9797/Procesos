@@ -1,0 +1,40 @@
+package ejercicios;
+
+public class Consumidor extends Thread{
+
+	private int cantidad;
+	private int n;
+	private Monitor m;
+	
+	
+	public Consumidor(int n,Monitor m, int cantidad) {
+		
+		this.cantidad= cantidad;
+		this.n=n;
+		this.m=m;
+		this.setName("c "+n);
+	}
+	
+	public Consumidor(int n,Monitor m) {
+		
+		this(n, m, 1);
+	}
+
+	public void run() {
+		
+		while(true) {
+			try {
+				m.entrar(cantidad);
+				//si no puede entrar se va a bloquear
+				//cuando se desbloquee tendrá el cerrojo del monitor
+				
+				m.actualizar(cantidad);
+				m.salir();
+				
+				sleep(3000L);
+			} catch (InterruptedException e) {}//try
+			
+		}//while
+		
+	}//run
+}//class

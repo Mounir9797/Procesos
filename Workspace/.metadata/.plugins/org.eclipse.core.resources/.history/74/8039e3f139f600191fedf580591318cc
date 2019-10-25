@@ -1,0 +1,16 @@
+package puente;
+
+public class Coche extends Thread{
+	
+
+	private Puente p;
+	private String id;
+	private boolean parar;
+	
+	public Coche(Puente p, String matricula, boolean parar) {
+		super();
+		this.p = p;
+		this.id = matricula;
+		this.parar = parar;
+	}
+}

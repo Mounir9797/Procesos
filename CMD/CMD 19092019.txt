@@ -1,0 +1,215 @@
+E:\Mounir\Programacion\Workspace\T1_Procesos>javac -d bin src\Compilar.java
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin Compilar
+Hola que tal bro, voy a cambiar
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>javac -d bin\control src\Compilar.j
+ava
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>javac -d bin\control src\control\Co
+mpilar.java
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>javac -d bin src\control\Compilar.j
+ava
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin Compilar
+Hola que tal bro, voy a cambiar
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin control.Compilar
+Hola que tal bro, ya cambié antes, ahora en paquete
+
+----------------------------------------------------------------
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin control.NotepadExe_V1
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin control.NotepadExe_V2
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin control.NotepadExe_V2
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin ejecutar.Comando DIR
+DIR
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin ejecutar.Comando DIR
+DIR
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin ejecutar.Comando DIR
+DIR
+Microsoft Windows [Versi¢n 6.3.9600]
+(c) 2013 Microsoft Corporation. Todos los derechos reservados.
+
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin ejecutar.Comando cls
+cls
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin ejecutar.Comando DIR
+DIR
+ El volumen de la unidad E es Datos
+ El n£mero de serie del volumen es: 1DA9-D686
+
+ Directorio de E:\Mounir\Programacion\Workspace\T1_Procesos
+
+16/09/2019  11:27    <DIR>          .
+16/09/2019  11:27    <DIR>          ..
+16/09/2019  11:27               301 .classpath
+16/09/2019  11:27               387 .project
+16/09/2019  11:27    <DIR>          .settings
+19/09/2019  09:17    <DIR>          bin
+19/09/2019  09:17    <DIR>          src
+               2 archivos            688 bytes
+               5 dirs  304.393.404.416 bytes libres
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin ejecutar.Comando DIR
+DIR
+ El volumen de la unidad E es Datos
+ El n£mero de serie del volumen es: 1DA9-D686
+
+ Directorio de E:\Mounir\Programacion\Workspace\T1_Procesos
+
+19/09/2019  09:40    <DIR>          .
+19/09/2019  09:40    <DIR>          ..
+16/09/2019  11:27               301 .classpath
+16/09/2019  11:27               387 .project
+16/09/2019  11:27    <DIR>          .settings
+19/09/2019  09:17    <DIR>          bin
+19/09/2019  09:40                 0 log.txt
+19/09/2019  09:17    <DIR>          src
+               3 archivos            688 bytes
+               5 dirs  304.393.400.320 bytes libres
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin ejecutar.Comando DIR
+DIR
+ El volumen de la unidad E es Datos
+ El n£mero de serie del volumen es: 1DA9-D686
+
+ Directorio de E:\Mounir\Programacion\Workspace\T1_Procesos
+
+19/09/2019  09:40    <DIR>          .
+19/09/2019  09:40    <DIR>          ..
+16/09/2019  11:27               301 .classpath
+16/09/2019  11:27               387 .project
+16/09/2019  11:27    <DIR>          .settings
+19/09/2019  09:17    <DIR>          bin
+19/09/2019  09:41                 0 log.txt
+19/09/2019  09:17    <DIR>          src
+               3 archivos            688 bytes
+               5 dirs  304.393.396.224 bytes libres
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin ejecutar.Comando DIR
+DIR
+ El volumen de la unidad E es Datos
+ El n£mero de serie del volumen es: 1DA9-D686
+
+ Directorio de E:\Mounir\Programacion\Workspace\T1_Procesos
+
+19/09/2019  09:40    <DIR>          .
+19/09/2019  09:40    <DIR>          ..
+16/09/2019  11:27               301 .classpath
+16/09/2019  11:27               387 .project
+16/09/2019  11:27    <DIR>          .settings
+19/09/2019  09:17    <DIR>          bin
+19/09/2019  09:41               567 log.txt
+19/09/2019  09:17    <DIR>          src
+               3 archivos          1.255 bytes
+               5 dirs  304.393.392.128 bytes libres
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin ejecutar.PBlotes
+Error: no se ha encontrado o cargado la clase principal ejecutar.PBlotes
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin ejecutar.PBLotes
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin ejecutar.PBLotes
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin ejecutar.ExecCompilar
+Hola que tal bro, ya cambié antes, ahora en paquete
+
+
+9:45 26/09/2019
+
+Microsoft Windows [Versión 6.3.9600]
+(c) 2013 Microsoft Corporation. Todos los derechos reservados.
+
+C:\Windows\System32>e:
+
+E:\>E:\Mounir\Programacion\Workspace\T1_Procesos
+"E:\Mounir\Programacion\Workspace\T1_Procesos" no se reconoce como un comando in
+terno o externo,
+programa o archivo por lotes ejecutable.
+
+E:\>cd Mounir\Programacion\Workspace\T1_Procesos
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>javac -d src\Hola.java
+javac: not a directory: src\Hola.java
+Usage: javac <options> <source files>
+use -help for a list of possible options
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>javac -d bin src\Hola.java
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin src\Hola
+Error: no se ha encontrado o cargado la clase principal src\Hola
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin Hola
+Hola
+Hola
+Hola
+Hola
+Hola
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>javac -d bin src/procesos/Hola.java
+
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>javac -cp bin procesos.Hola
+error: Class names, 'procesos.Hola', are only accepted if annotation processing
+is explicitly requested
+1 error
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin procesos.Hola
+Hola
+Hola
+Hola
+Hola
+Hola
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>
+
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin procesos.ExecHola
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>Hola
+Hola
+Hola
+Hola
+Hola
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin ejecutar.Mensaje adiós
+ 7
+adiós
+adiós
+adiós
+adiós
+adiós
+adiós
+adiós
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin ejecutar.Mensaje adiós
+ 7
+adiós
+adiós
+adiós
+adiós
+adiós
+adiós
+adiós
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>java -cp bin ejecutar.ExecMensaje a
+diós 7
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>adiós
+adiós
+adiós
+adiós
+adiós
+adiós
+adiós
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>
+

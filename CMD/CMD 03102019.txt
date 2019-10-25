@@ -1,0 +1,52 @@
+8:50 03/10/2019
+
+
+E:\Mounir\Programacion>tasklist /v > tasklist.txt
+
+C:\Users\mañana>tasklist /svc /fi "imagename svchost.exe"
+Error: No se reconoce el filtro de búsqueda.
+
+C:\Users\mañana>tasklist /svc /fi "pid eq 1016"
+INFORMACIÓN: no hay tareas ejecutándose que coincidan con los
+criterios especificados.
+
+C:\Users\mañana>tasklist /svc /fi "pid eq 784"
+
+Nombre de imagen               PID Servicios
+
+========================= ======== =============================================
+
+svchost.exe                    784 BrokerInfrastructure, DcomLaunch, LSM,
+
+                                   PlugPlay, Power, SystemEventsBroker
+
+
+C:\Users\mañana>tasklist /fi "status eq running"
+
+Nombre de imagen               PID Nombre de sesión Núm. de ses Uso de memor
+========================= ======== ================ =========== ============
+csrss.exe                      608 Console                    1    50.424 KB
+dwm.exe                        928 Console                    1    23.868 KB
+HCLOUD.exe                    1636 Console                    1    27.600 KB
+grckm.exe                     2612 Console                    1    15.676 KB
+ubssrv_oc_only.exe            2928 Console                    1    40.460 KB
+taskhostex.exe                2372 Console                    1     9.820 KB
+explorer.exe                  3108 Console                    1   112.372 KB
+igfxHK.exe                    3300 Console                    1     6.920 KB
+igfxTray.exe                  3308 Console                    1     8.564 KB
+ClassicStartMenu.exe          3332 Console                    1     8.872 KB
+igfxEM.exe                    3396 Console                    1     9.292 KB
+RAVCpl64.exe                  3860 Console                    1    10.276 KB
+VCDDaemon.exe                 3256 Console                    1     5.720 KB
+AlarmClock.exe                1144 Console                    1    16.568 KB
+IAStorIcon.exe                2604 Console                    1    33.884 KB
+eclipse.exe                   2760 Console                    1   569.040 KB
+chrome.exe                    2676 Console                    1    87.592 KB
+chrome.exe                    2916 Console                    1     4.860 KB
+chrome.exe                    1800 Console                    1     6.112 KB
+wordpad.exe                   4240 Console                    1    30.804 KB
+cmd.exe                       4520 Console                    1     2.712 KB
+conhost.exe                   2708 Console                    1     5.560 KB
+notepad.exe                   2208 Console                    1     7.200 KB
+
+C:\Users\mañana>

@@ -1,0 +1,45 @@
+package banco;
+
+public class Movimiento extends Thread{
+	
+	private Cuenta c;
+	private int id;
+	private boolean parar;
+	private long retardo;
+	
+	public Movimiento(int id, Cuenta c, long retardo) {
+		this.id= id;
+		this.setName("m"+id);
+		this.c=c;
+		this.retardo=retardo;
+		this.parar= false;
+	}//constructor
+	
+	public Movimiento(int id, Cuenta c) {
+		this.id= id;
+		this.setName("m"+id);
+		this.c=c;
+		this.retardo= 2000L;
+		this.parar= false;
+	}//constructor
+
+	public void run() {
+		while (!parar) {
+			
+			int cantidad= (int) (Math.random()*1000)-500;
+			
+			try {
+				System.out.println(this.getName()+"... INTENTA... "+cantidad);	
+				c.entrar(cantidad);
+				c.operar(cantidad);
+				c.salir();
+				
+				sleep(retardo);
+			} catch (InterruptedException e) {
+				parar=true;
+			}
+		}//while
+	System.out.println("FIN DEL HILO ..."+this.getName());	
+	}//run
+	
+}//class

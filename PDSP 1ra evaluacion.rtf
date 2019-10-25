@@ -1,0 +1,198 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang3082{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\froman\fprq2\fcharset0 Calibri;}{\f2\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs24\lang10 T1- PROCESOS Y PROGRAMAS\par
+\par
+12-09-2019\par
+\b 1.Procesos y programas\b0\par
+\b PROGRAMA\b0 : conjunto de instrucciones escritas en un lenguaje de programaci\'f3n. Un programa es Est\'e1tico, es decir por si solo no hace nada.\par
+\par
+\b PROCESO\b0 : instancia de un programa en ejecuci\'f3n. Es dinamico, es decir hace cosas. Cuando se solicitala ejecucui de un programa, el \b SISTEMA OPERATIVO \b0 :\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1 Crea un proceso vacio\fs22\par
+{\pntext\f0 2.\tab}\fs24 Le asigna al proceso los recursos necesarios para la ejecuci\'f3n de ese codigo\fs22\par
+{\pntext\f0 3.\tab}\fs24 Carga el c\'f3digo del problema a ejecutar en la memoria asignada al proceso.\fs22\par
+
+\pard\sa200\sl276\slmult1\par
+Recursos asignados a un proceso:\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Mapa de memoria: para cargar el c\'f3digo ejecutable y adem\'e1s para la pila, heap, etc.\par
+{\pntext\f2\'B7\tab}Tabla de procesos: PID, PID Padre, estado... todo esto se guarda en el \b Bloque de control de procesos\b0  (BCP).\par
+{\pntext\f2\'B7\tab}Estado del proceso: Contador del programa, contenido de los registros, etc.\par
+{\pntext\f2\'B7\tab}Otros recursos: Acceso a ficheros, dispositivos de E/S, etc.\par
+
+\pard\sa200\sl276\slmult1\par
+Si ejecutamos el mismo programa varias veces tendremos diferentes procesos con espacios de memoria, etc; separados  e independientes (cada uno tiene recursos diferentes).\par
+Tasklist (muestra procesoso activos).\par
+\par
+El sistema operativo se encarga de gestionar(crear, eliminar, poner puntos, etc) la ejecucuin y tambien la comunicacion entre procesos.\par
+Para gestionar los procesos intervienen todos los componentes del SO:\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 gestor de memoria\par
+{\pntext\f2\'B7\tab}gestor de procesos, planificador, etc\par
+{\pntext\f2\'B7\tab}gestor de E/S\par
+
+\pard\sa200\sl276\slmult1 Un n\'facleo solo puede ejecutar un proceso a la vez.\par
+\par
+\b 2. Multiprogramaci\'f3n y concurrencia de procesos\b0\par
+Un n\'facleo de un procesador solo puede ejecutar instrucciones de una en una. Esto significa que en cada momoento solo puede ejecutar un proceso. Sin embargo los procesos pueden tener \b Tiempos de Espera \b0 debidos principalmente a:\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 la SINCRONIZACION con otros procesos (por ejemplo, esperar resultados de una BD).\par
+{\pntext\f2\'B7\tab}la interaccion con dispositivos de E/S (por ejemplo abrir un archivo que est\'e1 en el disco, abrir un recurso accesible por red, etc.).\par
+{\pntext\f2\'B7\tab}realizaci\'f3n de calculos complejos y costosos: operaciones matematicas largas que se realizan en la UAL o bien renderizandon de graficos que se envien a una tarjeta grafica con un procesador dedicado.\par
+
+\pard\sa200\sl276\slmult1\par
+Para mejoroar la eficiencia del uso del procesador , los SO tienen componentes que permiten aprovechar los tiempos de espera del proceso que est\'e1 ejecutando para ejecutar otros procesos. El objetic\'a1vo es que el procesaddor est\'e9 aprovechado al m\'e1ximo. El compoente del SO que se encarga de la gestion de procesos se llama PLANIFICADOR. \par
+
+\pard\nowidctlpar\sa200\sl276\slmult1\kerning1\f1\lang3082 Al trabajar de esta forma se produce un efecto llamado concurrencia de procesos: varios procesos parecen estar ejecut\'e1ndose al mismo tiempo.\par
+\kerning0\f0\lang10\par
+
+\pard\sa200\sl276\slmult1 En general hablamos de concurrencia cuando varios procesos se ejecutan en paralelo. Podemos tener vaios tipos de concurrencia:\par
+\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 MULTIPROGRAMACI\'d3N: Los procesos parecen ejecutarse en paralelo sobre sistemas con un solo nucleo, gracias a la planificaci\'f3n del SO.\par
+{\pntext\f2\'B7\tab}programacuion PARALELA: se produce una concurrencia real en un sistema multiprocesador o multinucleo. \par
+{\pntext\f2\'B7\tab}sfafsd\par
+
+\pard\sa200\sl276\slmult1\par
+Multiprogramaci\'f3n: \par
++ eficiencia: mayor aprovechamiento del procesador.\par
++ barata\par
+- SO mas complejo\par
+- capacidad de concurrencia limitada\par
+\par
+PROGRAMACION PARALELA;\par
++ mayor capacidad de concurrencia\par
+-sigue siendo necesario multiprogramaci\'f3n\par
+-es mas caro\par
+-mayor complejidad del sistema operativo poque tiene que controlar la  sincronizacion entre varios procesadores con varios procesos ejecutando en paralelo.\par
+\par
+Programacion distribuida:\par
++ sistemas muy escalables (pueden creecer o decrecer facilmente adaptandose a las necesidades del momento)\par
+- maquinas diferentes, dificiles de sincronizar\par
+-no hay memoria compartida: el SO se encargar\'e1 de controlar la coherencia de la informaci\'f3n. Esto se hace por la red de comunicaci\'f3n y aumenta la complejidad general.\par
+\par
+3. SERVICIOS Y PROCESOS\par
+Un SERVICIO es un tipo especial de proceso que:\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 se mantiene en ejecuci\'f3n ahsta que el equipo se apaga o se detiene manualmente.\par
+{\pntext\f2\'B7\tab}espera peticiones que resuelve y responde\par
+{\pntext\f2\'B7\tab}se ejecuta en segundo plano, s decir, no tiene interfaz de usuario. Puede arancar de forma automatica y manual.\par
+{\pntext\f2\'B7\tab}envia el resultado de su ejecuci\'f3n a ficheros de registro que llamamos LOG.\par
+{\pntext\f2\'B7\tab}en Linix se llaman daemons o demonios.\par
+
+\pard\sa200\sl276\slmult1\par
+4. Gesti\'f3n de procesos con Java\par
+Comandos para moversepor directorios\par
+\tab cd  <ruta> -cd .. sube un nivel, cd\\ vuelve a la raiz\par
+\tab d: -cambiar de unidad de disco\par
+\tab dir -ver el contenido de un directorio\par
+Antes de ponerse a compilar o ejecutar debemos comprobar que en la variable de entorno Path tenemos la ruta del jdk que estamos usando el proyecto\par
+Para compilar o ejecutar desde consola, es recomendable situarse en el principio en la carpeta del proyecto o la carpeta padre, cd, usando cd...\par
+\par
+19/09/2019\par
+\par
+Compilar y ejecutar clases java con estructuras de paquetes\par
+Compilar:JAVAC\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 -d: para el directorio de destino\par
+{\pntext\f2\'B7\tab}Archivo de origen con ruta y con extensi\'f3n\par
+
+\pard\sa200\sl276\slmult1 javac -d bin src/Compliar.java\par
+\par
+Ejecutar:\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 - cp para el directorio donde se encuentra\par
+{\pntext\f2\'B7\tab}nombre del ejecutable sin la extensi\'f3n\par
+{\pntext\f2\'B7\tab}poner el paquete como prefijo del archivo, no como carpeta.\par
+
+\pard\sa200\sl276\slmult1 Java\tab -cp bin\tab Compilar\par
+\par
+OJO: Cuando tenemos el proyecto estructurado en paquetes, cada paquete supone una carpeta en la estructura tanto de src como de bin.\par
+\par
+El lenguaje Java tiene algunas clases para la gestion de procesos\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Process: crea un proceso que ejecuta algo.\par
+{\pntext\f2\'B7\tab}Runtime:_ Devuelve una referencia a el entorno de ejecuci\'f3n actual\par
+
+\pard\sa200\sl276\slmult1 ProcessBuilder es una fusion de los 2\par
+\par
+Ejercicios de Creacion de procesos Windows\par
+1.Escribir un programa en java que arranque notepad.exe usando las posibilidades anteriores\par
+El ejercico anterior creaba un proceso que ejecuta una aplicacion, pero que no tiene mas entradas ni salidas.\par
+Vamos a ver procesos que ejecutan otras aciones diferentes, que implican trabajar con entrada y salida del proceso: Comandos del SO, etc.\par
+Ejecucucion del comando del SO desde un programa:\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 CMD\\C <comando> ejecuta el comando y despues cierra la consola.\par
+{\pntext\f2\'B7\tab}CMD\\K <comando> ejecuta el comando y deja la consola viva.\par
+{\pntext\f2\'B7\tab}Gestionamos la entrada y salida del comando a traves de los flujos E\\S del proceso.\par
+
+\pard\sa200\sl276\slmult1\par
+Un prceso tiene flujos de entrada, salida y error:\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 getInputStream el proceso padre captura la salida del proceso hijo y puede redirigirlo a un archivo, a la salida estandar o ignorarlo\par
+{\pntext\f2\'B7\tab}getOutputStream captura el flujo de entrada.\par
+{\pntext\f2\'B7\tab}getErrorStream captuta el flujo de error del proceso.\par
+
+\pard\sa200\sl276\slmult1\par
+Ejercicio\par
+Escribir un programa Comando que ejecute comandos del SO, sin argumentos. Redirigir la salida tanto a la salida estandar como a un archivo log.txt, creado en modo append.\par
+\par
+En general, la clase ProcessBuilder nos permute hacer cosas comlejas de forma simplificada\par
+\par
+Ejercicio:\par
+Abrir ProcessBuilder una consola de comandos y perdirle que ejecute un archivo .bat con comandos variados. Redirigir la salida a un archivo pb.txt, y el error a pberr.txt\par
+\par
+En general, la clase Processbuilder nos permite hacer cosas complejas de forma simplificada. La principa ventaja es la posibilidad de redirigir los flujos de entrada, salida y error a aarchivos sin tener que programar su procesamiento\par
+\par
+Ejercicio\par
+Escribir un programa que ejecute el programa control.Compilar desde la consola, y visualice la salida por pantalla. Hacer una version con process y otra con ProcessBuilder para ver las diferencias.\par
+Ejercicio:\par
+1. Escribir un  programa Hola.java que imprima "Hola" 5 veces seguidas por la salida estandar. Colocarlo en el `paquete por defecto.\par
+1.1 Escribir los comandos necesarios para compilar y ejecutar el programa si estamos en la raiz del programa.\par
+2. Colocar el mismo programa en un paquete llamado procesos.\par
+2.1 Realizar de nuevo el mismo proceso pero con esta nueva ubicaci\'f3n.\par
+2.2 Redirigir a un archivo Hola.txt\par
+2.3 Escribrir un programa llamado ExecHola que ejecute Hola.java. Colocarlo en el paquete procesos\par
+3. Modificar el programa Hola_V2 para que redirija su salida a un archivo Hola.txt\par
+4.Escribir un programa Mensaje que reciba una palabra y un numero y escriba tantas veces como diga el numero\par
+4.1.Escribar otro programa ExecMensaje que reciba los argumentos y ejecute Mensaje con ellos\par
+5. Escribir un programa Habla que pida al usuario una palabra y un n\'famero en tiempo de ejecucion, y escriba la palabra tantas veces como diga el n\'famero.\par
+5.1. Escribir otro programa que ejecute ExecHabla que reciba los 2 argumentos y ejecute Mensaje con ellos.\par
+\par
+\par
+03/10/2019\par
+ESTADOS DE UN PROCESO\par
+En un entorno de musltiprogramaci\'f3n donde conviven varios procesos simultraneos gestionados por el planificador del SO, un proceso puede estar en los siguientes estados.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 En ejecuci\'f3n: el proceso tiene el procesador y esta en ejecucui\'f3n.\par
+
+\pard\sa200\sl276\slmult1\tab\tab Si un proceso esta en ejecucion y tiene que esperar algun evento xterno pasa a \tab\tab\tab bloqueado.\par
+\tab\tab Si esta en ejecucuin y se termina su rodaja (slot) de tiempo, pasa a listo.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Bloqueado: el proceso no tiene el procesador porque esta esperando algun tipo de evento.\par
+
+\pard\sa200\sl276\slmult1\tab\tab Cuando termina el bloqueo el proceso pasa a listo.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Listo: quiere ejecutarse pero el planificador le ha cedido el procesador a otro.\par
+
+\pard\sa200\sl276\slmult1\tab\tab Cuando un proceso pasa a listo pasa a en ejecuci\'f3n si el planificador le da un \tab\tab\tab slot  temporal de CPU.\par
+\par
+Comando TASKLIST\par
+help tasklist: muestra las opciones m\'e1s importantes del comando.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 /svc muestra los servivcios alojados bajo un proceso\par
+{\pntext\f2\'B7\tab}/v opcion verbose: muestra toda la informacion disponible\par
+{\pntext\f2\'B7\tab}/fi: filtros que permiten afinar las busquedas\par
+
+\pard\sa200\sl276\slmult1 qUEREMOS VER\par
+1 los servivcios que est\'e9n bajo Oracle.exe\par
+tasklist /svc /fi "imagename eq oracle.exe" \par
+
+\pard\sa200\sl276\slmult1\par
+\par
+\par
+\par
+}
+ 

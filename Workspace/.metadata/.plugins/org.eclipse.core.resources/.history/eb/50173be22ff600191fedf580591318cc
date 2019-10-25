@@ -1,0 +1,32 @@
+package banco;
+
+public class Movimiento extends Thread{
+	
+	private Cuenta c;
+	private int id;
+	private boolean parar;
+	
+	public Movimiento(int id, Cuenta c) {
+		this.id= id;
+		this.setName("m"+id);
+		this.c=c;
+		this.parar= false;
+	}//constructor
+
+	public void run() {
+		while (!parar) {
+			
+			int cantidad= (int) (Math.random()*500);
+			
+			try {
+				c.entrar(cantidad);
+				c.operar(cantidad);
+				c.salir();
+			} catch (InterruptedException e) {
+				parar=true;
+			}
+		}//while
+	System.out.println("FIN DEL HILO ..."+this.getName());	
+	}//run
+	
+}//class

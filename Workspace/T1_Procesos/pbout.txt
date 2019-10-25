@@ -1,0 +1,57 @@
+Microsoft Windows [Versi¢n 6.3.9600]
+(c) 2013 Microsoft Corporation. Todos los derechos reservados.
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>DIR 
+ El volumen de la unidad E es Datos
+ El n£mero de serie del volumen es: 1DA9-D686
+
+ Directorio de E:\Mounir\Programacion\Workspace\T1_Procesos
+
+19/09/2019  10:15    <DIR>          .
+19/09/2019  10:15    <DIR>          ..
+16/09/2019  11:27               301 .classpath
+16/09/2019  11:27               387 .project
+16/09/2019  11:27    <DIR>          .settings
+19/09/2019  09:17    <DIR>          bin
+19/09/2019  09:45             1.149 log.txt
+19/09/2019  10:15                 0 pberr.txt
+19/09/2019  10:12                51 pbin.bat
+19/09/2019  10:15                 0 pbout.txt
+19/09/2019  09:17    <DIR>          src
+               6 archivos          1.888 bytes
+               5 dirs  304.393.355.264 bytes libres
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>DIR \
+ El volumen de la unidad E es Datos
+ El n£mero de serie del volumen es: 1DA9-D686
+
+ Directorio de E:\
+
+18/09/2019  18:01    <DIR>          AlvaroP
+12/09/2019  10:04    <DIR>          Android
+12/09/2019  10:02    <DIR>          A¤o pasado
+14/12/2016  10:29    <DIR>          Config
+14/02/2018  12:46    <DIR>          datafiles
+14/02/2018  12:52    <DIR>          datafiles1
+05/04/2019  12:13    <DIR>          dd
+14/12/2016  10:20    <DIR>          Logs
+17/09/2019  08:27    <DIR>          Mounir
+13/09/2019  09:00               678 Mounir - Acceso directo.lnk
+01/12/2006  23:37           904.704 msdia80.dll
+22/03/2019  13:43    <DIR>          MV
+24/05/2016  13:16           210.202 mysqlsampledatabase.sql
+09/02/2017  10:38    <DIR>          Programaci¢n
+26/02/2019  13:13    <DIR>          Repositories
+13/06/2019  11:08    11.199.840.256 Ubuntu Backup.vdi
+18/09/2019  18:03    <DIR>          W10-64
+09/03/2018  11:56    <DIR>          Windows Server 2012
+               4 archivos 11.200.955.840 bytes
+              14 dirs  304.393.355.264 bytes libres
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>mkdir nuevo
+
+E:\Mounir\Programacion\Workspace\T1_Procesos>cd nuevo
+
+E:\Mounir\Programacion\Workspace\T1_Procesos\nuevo>dirrrrrrrrrrr
+
+E:\Mounir\Programacion\Workspace\T1_Procesos\nuevo>

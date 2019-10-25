@@ -1,0 +1,39 @@
+package ejercicios;
+
+public class Productor extends Thread{
+
+	private int cantidad;
+	private int n;
+	private Monitor m;
+	
+	
+	public Productor(int n,Monitor m, int cantidad) {
+		
+		this.cantidad= cantidad;
+		this.n=n;
+		this.m=m;
+		this.setName("P "+n);
+	}
+	
+	public Productor(int n,Monitor m) {
+		
+		this(n, m, 1);
+	}
+
+	public void run() {
+		while(true) {
+			try {
+				m.entrar(cantidad);
+				//si no puede entrar se va a bloquear
+				//cuando se desbloquee tendrá el cerrojo del monitor
+				
+				m.actualizar(cantidad);
+				m.salir();
+				
+				sleep(2000L);
+			} catch (InterruptedException e) {}
+
+		}
+	}
+
+}//class
