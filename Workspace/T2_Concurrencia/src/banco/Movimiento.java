@@ -3,12 +3,10 @@ package banco;
 public class Movimiento extends Thread{
 	
 	private Cuenta c;
-	private int id;
 	private boolean parar, ingreso;
 	private long retardo;
 	
 	public Movimiento(int id, Cuenta c, long retardo, boolean ingreso) {
-		this.id= id;
 		this.setName("m"+id);
 		this.c=c;
 		this.retardo=retardo;
@@ -17,7 +15,6 @@ public class Movimiento extends Thread{
 	}//constructor
 	
 	public Movimiento(int id, Cuenta c, boolean ingreso) {
-		this.id= id;
 		this.setName("m"+id);
 		this.c=c;
 		this.retardo= 2000L;

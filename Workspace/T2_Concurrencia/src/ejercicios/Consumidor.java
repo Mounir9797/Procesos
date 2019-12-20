@@ -3,14 +3,12 @@ package ejercicios;
 public class Consumidor extends Thread{
 
 	private int cantidad;
-	private int n;
 	private Monitor m;
 	private boolean parar;
 	
 	public Consumidor(int n,Monitor m, int cantidad) {
 		
 		this.cantidad= cantidad;
-		this.n=n;
 		this.m=m;
 		this.setName("c"+n);
 		this.parar=false;

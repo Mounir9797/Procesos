@@ -3,7 +3,6 @@ package ejercicios;
 public class Productor extends Thread{
 
 	private int cantidad;
-	private int n;
 	private Monitor m;
 	private boolean parar;
 	
@@ -11,7 +10,6 @@ public class Productor extends Thread{
 	public Productor(int n,Monitor m, int cantidad) {
 		
 		this.cantidad= cantidad;
-		this.n=n;
 		this.m=m;
 		this.setName("p"+n);
 		this.parar = false;

@@ -31,7 +31,7 @@ public class HiloSleepRun implements Runnable {
 			System.out.println("Hilo nº "+th.getId()+" "+th.getName()+" contador: "+cont);
 			cont++;
 			try {
-				th.sleep(milisec);
+				Thread.sleep(milisec);
 			} catch (InterruptedException e) {}
 		}//while
 		

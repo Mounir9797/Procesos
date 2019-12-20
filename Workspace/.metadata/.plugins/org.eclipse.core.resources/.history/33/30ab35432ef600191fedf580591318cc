@@ -1,6 +1,0 @@
-package Banco;
-
-public class Cuenta {
-
-	private volatile int saldo;
-}
