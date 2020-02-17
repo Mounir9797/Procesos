@@ -8237,7 +8237,7 @@ UDP (User Datagram Protocol):  No orientado a conexion, flujo uinidireccional.  
 \par
 \par
 5/12/2019\par
-L\'d1exctura de recursos web\par
+Lectura de recursos web\par
 Para descargar arcguvos de la web podemos usar tanto la clase URL como la URLConnection:\par
 
 \pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj URL permite acceder a un recurso a partid del m\'e9todo open stream(). Sin embargo perrmite solo lectura; es decir, no podemos enviar ni modificar el recursso de ninguna forma.\par
@@ -8253,16 +8253,39 @@ InpiutSreeam is= url.openConnection().getInputStram();\par
 \par
 Para terminar con este apartado\par
 \par
-\par
-\par
-\par
-\par
-\par
 Los protocolos del nivel de transporte, UDP (User Data Protocol) y TCP( Transport Control Protocol) proporcionan comunicacion extremo a extremo. Esto significan que conf\'edan   \par
 \par
-\par
+Sockets TCP: a diferencia de UDP que trabaja con DatagramSocket, en TCP hay dos tipos de socket:\par
 
-\pard\sa200\sl276\slmult1\qj\par
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qj ServerSocket: aceptan o rechazan conexiones; cuando aceptan una conexion, `permiten abrir un flujo exclusivo de datos.\par
+{\pntext\f1\'B7\tab}Socket: se utiliza para implmentar clientes TCP, que solicitan conexi\'f3n a alg\'fan servidor TCP.\par
+
+\pard\sa200\sl276\slmult1\qj As\'ed, cada servidor TCP tiene un puerto p\'fablico, asociado a la clase ServerSocket por el cual escucha peticiones de conexion. La l\'f3gica del servidor TCP es la que sigue:\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1\qj Un cliente realiza una peticion a la conexion, y para ello abre un objeto socket con destino en el ServerSocket con su IP y su puerto p\'fablico\par
+{\pntext\f0 2.\tab}El ServerSocket puede aceptar o rechazar la conexi\'f3n:\par
+{\pntext\f0 3.\tab}La conexion se gestiona a traves de streams de E/S\par
+
+\pard\sa200\sl276\slmult1\qj\tab 2.1 Si la rechaza, produce una excepci\'f3n en el cliente\par
+\tab 2.2 Si la acepta, abrir\'e1 otro objeto socket\par
+\par
+NUMERACI\'d6N DE PPUERTOS TCP\par
+Los puertos TCP pueden ir de 0 a 65535, y est\'e1n subdivididos en diferentes rangos.\par
+\par
+20/01/2020\par
+Comunicaciones MULTICAST\par
+Son un tipo de cdopmunicacion basada en sockets UDP que permite distribuir un mensaje a todos los miembros del grupo.\par
+Un grupo multicast es un cinjunto de direcciones IP que escuchan en un mismo puerto.\par
+El emisor no conoce l\'f1as direcciones IP de los que escuchan.\par
+Simplemente, escriben en el puerto multicast y asi todos los qu esten suscritos al grupo recibiran la informaci\'f3n.\par
+Un grupo multicast se especifica mediante una direccion IP de clase D; es decir, en el rango (224.0.0.0 ...239.255.255.255]; la primera de ellas est\'e1 reservada y no se puede utilizar.\par
+Tanto el servidor como el cliente multicast utilizar\'e1n un MulticastSocket\par
+\par
+\par
+\par
+\par
 \par
 }
  

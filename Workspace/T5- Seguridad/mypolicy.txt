@@ -1,0 +1,7 @@
+grant SignedBy "mounir{
+
+	permission java.util.PropertyPermission "user.dir", "read";
+	permission java.io.FilePermission "${user.dir}${/}names.txt", "read";
+	permission java.net.SocketPermission "*:80", "connect, resolve";
+
+};
